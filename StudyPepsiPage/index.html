@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pepsi Landing Page</title>
+	<link rel="stylesheet"  href="style.css">
+</head>
+<body>
+	<section class="sec">
+		<div class="bg1"></div>
+		
+		<header>
+			<a href="#"><img src="images/logo.png" class="logo"></a>
+			<div class="toggleMenu" onclick="toggleMenu();"></div>
+			<ul class="navigation">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Products</a></li>
+				<li><a href="#">What's New</a></li>
+				<li><a href="#">Newsletter</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</header>
+		<div class="content">
+			<div class="textBox">
+				<h2>That's What <br><span>I Like</span></h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod maximus ex, et venenatis sem sodales id. Aliquam condimentum rutrum felis, ut molestie massa hendrerit at. Fusce eget euismod nulla. Cras laoreet diam at massa aliquet, ut porttitor nulla tempor. Phasellus facilisis nisi sit amet sodales commodo. Curabitur posuere vestibulum ipsum id sagittis.</p>
+				<a href="#">View All Products</a>
+			</div>
+			<div class="imgBox">
+				<img src="images/pepsi001.png" class="pepsi">
+			</div>
+		</div>
+		<ul class="thumb">
+			<li><img src="images/pepsi001.png" onclick="imgSlider('images/pepsi001.png');changeBgColor('#0062be'); Bg1Color('#e60c2c');"></li>
+			<li><img src="images/pepsi002.png" onclick="imgSlider('images/pepsi002.png');changeBgColor('#e60c2c'); Bg1Color('#0062be');"></li>
+			<li><img src="images/pepsi003.png" onclick="imgSlider('images/pepsi003.png');changeBgColor('#1e1e1e');
+			Bg1Color('#C0C0C0');"></li>
+		</ul>
+		<ul class="sci">
+			<li><a href="#"><img src="images/facebook.png"></a></li>
+			<li><a href="#"><img src="images/twitter.png"></a></li>
+			<li><a href="#"><img src="images/instagram.png"></a></li>
+		</ul>
+
+
+	</section>
+
+	<script type="text/javascript">
+		function imgSlider(anything){
+			document.querySelector('.pepsi').src = anything;
+		}
+
+		function changeBgColor(color){
+			const sec = document.querySelector('.sec');
+			sec.style.background = color;
+		}
+
+
+		function Bg1Color(color){
+			const bg1 = document.querySelector('.bg1');
+			bg1.style.background = color;
+		}
+
+
+		function toggleMenu(){
+			const toggleMenu = document.querySelector('toggleMenu');
+			const navigation = document.querySelector('navigation');
+			navigation.classList.toggle('active')
+		}
+	</script>
+
+</body>
+</html>
